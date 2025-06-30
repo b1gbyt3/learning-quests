@@ -159,16 +159,11 @@
         }
 
         /* Define specific colors for the quest icons */
-        .quest-card:nth-child(1) .quest-icon { background: var(--blue); } /* Fractions */
-        .quest-card:nth-child(2) .quest-icon { background: var(--green); } /* Spelling */
-        .quest-card:nth-child(3) .quest-icon { background: var(--yellow); } /* Shapes */
-        .quest-card:nth-child(4) .quest-icon { background: var(--red); } /* Math */
-        .quest-card:nth-child(5) .quest-icon { background: var(--purple); } /* Counting */
-        .quest-card:nth-child(6) .quest-icon { background: var(--orange); } /* Addition Table */
-        .quest-card:nth-child(7) .quest-icon { background: var(--teal); } /* Place Values */
-        .quest-card:nth-child(8) .quest-icon { background: var(--pink); } /* Rounding */
-        .quest-card:nth-child(9) .quest-icon { background: var(--blue); } /* New Quest: Coins */
-
+        .quest-card:nth-child(1) .quest-icon { background: var(--green); } /* Spelling */
+        .quest-card:nth-child(2) .quest-icon { background: var(--orange); } /* Addition Table */
+        .quest-card:nth-child(3) .quest-icon { background: var(--teal); } /* Place Values */
+        .quest-card:nth-child(4) .quest-icon { background: var(--blue); } /* Coins */
+        .quest-card:nth-child(5) .quest-icon { background: var(--purple); } /* Comparison */
 
         .quest-title {
             font-size: 1.8rem;
@@ -194,16 +189,11 @@
         }
 
         /* Define specific colors for the quest buttons */
-        .quest-card:nth-child(1) .quest-button { background: var(--blue); }
-        .quest-card:nth-child(2) .quest-button { background: var(--green); }
-        .quest-card:nth-child(3) .quest-button { background: var(--yellow); color: #333; }
-        .quest-card:nth-child(4) .quest-button { background: var(--red); }
+        .quest-card:nth-child(1) .quest-button { background: var(--green); }
+        .quest-card:nth-child(2) .quest-button { background: var(--orange); }
+        .quest-card:nth-child(3) .quest-button { background: var(--teal); }
+        .quest-card:nth-child(4) .quest-button { background: var(--blue); }
         .quest-card:nth-child(5) .quest-button { background: var(--purple); }
-        .quest-card:nth-child(6) .quest-button { background: var(--orange); }
-        .quest-card:nth-child(7) .quest-button { background: var(--teal); }
-        .quest-card:nth-child(8) .quest-button { background: var(--pink); }
-        .quest-card:nth-child(9) .quest-button { background: var(--blue); } /* New Quest: Coins */
-
 
         .quest-button:hover {
             transform: translateY(-2px);
@@ -275,6 +265,12 @@
             <a href="https://monetki-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
                 <div class="quest-icon">🪙</div>
                 <h3 class="quest-title">Coins</h3>
+                <div class="quest-button">Play Now</div>
+            </a>
+
+            <a href="https://comparison-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
+                <div class="quest-icon">⚖️</div>
+                <h3 class="quest-title">Comparison</h3>
                 <div class="quest-button">Play Now</div>
             </a>
         </div>
