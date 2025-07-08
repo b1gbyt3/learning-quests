@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Quest</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Learning Quest
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root {
             --blue: #4285F4;
             --green: #34A853;
             --yellow: #FBBC05;
@@ -234,50 +235,72 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style>
-</head>
-<body>
-    <div class="bg-animation"></div>
-    
-    <section class="hero">
-        <h1>Learning Quest</h1>
-        <p>Pick a quest and start learning!</p>
-        <a href="#quests" class="cta-button">
-            <span>🚀</span> Let's Go!
-        </a>
-    </section>
-
-    <section class="quests-section" id="quests">
-        <h2 class="section-title">Choose Your Quest</h2>
-        
-        <div class="quest-grid">
-            <!-- These cards will be dynamically updated by the GitHub Action -->
-            <a href="https://add-sub-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer" data-title="Math">
-                <div class="quest-icon">🧮</div>
-                <h3 class="quest-title">Math</h3>
-                <div class="quest-button">Play Now</div>
-            </a>
-
-            <a href="https://spelling-quest.web.app/" class="quest-card fade-in" target="_blank" rel="noopener noreferrer" data-title="Spelling">
-                <div class="quest-icon">📝</div>
-                <h3 class="quest-title">Spelling</h3>
-                <div class="quest-button">Play Now</div>
-            </a>
-            
-            <a href="https://monetki-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer" data-title="Coins">
-                <div class="quest-icon">🪙</div>
-                <h3 class="quest-title">Coins</h3>
-                <div class="quest-button">Play Now</div>
-            </a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 Learning Quest</p>
-    </footer>
-
-    <script>
-        // Simple smooth scrolling
+  </style>
+ </head>
+ <body>
+  <div class="bg-animation">
+  </div>
+  <section class="hero">
+   <h1>
+    Learning Quest
+   </h1>
+   <p>
+    Pick a quest and start learning!
+   </p>
+   <a class="cta-button" href="#quests">
+    <span>
+     🚀
+    </span>
+    Let's Go!
+   </a>
+  </section>
+  <section class="quests-section" id="quests">
+   <h2 class="section-title">
+    Choose Your Quest
+   </h2>
+   <div class="quest-grid">
+    <a class="quest-card fade-in" data-title="Math" href="https://add-sub-quest.web.app" rel="noopener noreferrer" target="_blank">
+     <div class="quest-icon">
+      🧮
+     </div>
+     <h3 class="quest-title">
+      Math
+     </h3>
+     <div class="quest-button">
+      Play Now
+     </div>
+    </a>
+    <a class="quest-card fade-in" data-title="Spelling" href="https://spelling-quest.web.app/" rel="noopener noreferrer" target="_blank">
+     <div class="quest-icon">
+      📝
+     </div>
+     <h3 class="quest-title">
+      Spelling
+     </h3>
+     <div class="quest-button">
+      Play Now
+     </div>
+    </a>
+    <a class="quest-card fade-in" data-title="Coins" href="https://monetki-quest.web.app" rel="noopener noreferrer" target="_blank">
+     <div class="quest-icon">
+      🪙
+     </div>
+     <h3 class="quest-title">
+      Coins
+     </h3>
+     <div class="quest-button">
+      Play Now
+     </div>
+    </a>
+   </div>
+  </section>
+  <footer class="footer">
+   <p>
+    © 2025 Learning Quest
+   </p>
+  </footer>
+  <script>
+   // Simple smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -299,6 +322,6 @@
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
-    </script>
-</body>
+  </script>
+ </body>
 </html>
