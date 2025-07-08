@@ -159,11 +159,15 @@
         }
 
         /* Define specific colors for the quest icons */
-        .quest-card:nth-child(1) .quest-icon { background: var(--green); } /* Spelling */
-        .quest-card:nth-child(2) .quest-icon { background: var(--orange); } /* Addition Table */
-        .quest-card:nth-child(3) .quest-icon { background: var(--teal); } /* Place Values */
-        .quest-card:nth-child(4) .quest-icon { background: var(--blue); } /* Coins */
-        .quest-card:nth-child(5) .quest-icon { background: var(--purple); } /* Comparison */
+        /* Note: These nth-child selectors might need adjustment if card order changes dynamically. */
+        /* For dynamic content, consider adding a data-color attribute to cards and styling based on that. */
+        .quest-card[data-title="Spelling"] .quest-icon { background: var(--green); }
+        .quest-card[data-title="Math"] .quest-icon { background: var(--orange); }
+        .quest-card[data-title="Coins"] .quest-icon { background: var(--blue); }
+        .quest-card[data-title="Rounding"] .quest-icon { background: var(--teal); }
+        .quest-card[data-title="Shapes"] .quest-icon { background: var(--purple); }
+        .quest-card[data-title="Counting"] .quest-icon { background: var(--pink); }
+
 
         .quest-title {
             font-size: 1.8rem;
@@ -189,11 +193,14 @@
         }
 
         /* Define specific colors for the quest buttons */
-        .quest-card:nth-child(1) .quest-button { background: var(--green); }
-        .quest-card:nth-child(2) .quest-button { background: var(--orange); }
-        .quest-card:nth-child(3) .quest-button { background: var(--teal); }
-        .quest-card:nth-child(4) .quest-button { background: var(--blue); }
-        .quest-card:nth-child(5) .quest-button { background: var(--purple); }
+        /* Note: Similar to icons, these nth-child selectors might need adjustment. */
+        .quest-card[data-title="Spelling"] .quest-button { background: var(--green); }
+        .quest-card[data-title="Math"] .quest-button { background: var(--orange); }
+        .quest-card[data-title="Coins"] .quest-button { background: var(--blue); }
+        .quest-card[data-title="Rounding"] .quest-button { background: var(--teal); }
+        .quest-card[data-title="Shapes"] .quest-button { background: var(--purple); }
+        .quest-card[data-title="Counting"] .quest-button { background: var(--pink); }
+
 
         .quest-button:hover {
             transform: translateY(-2px);
@@ -244,43 +251,24 @@
         <h2 class="section-title">Choose Your Quest</h2>
         
         <div class="quest-grid">
-
-            <a href="https://add-sub-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
+            <!-- These cards will be dynamically updated by the GitHub Action -->
+            <a href="https://add-sub-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer" data-title="Math">
                 <div class="quest-icon">🧮</div>
                 <h3 class="quest-title">Math</h3>
                 <div class="quest-button">Play Now</div>
             </a>
 
-            <a href="https://monetki-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
-                <div class="quest-icon">🪙</div>
-                <h3 class="quest-title">Coins</h3>
-                <div class="quest-button">Play Now</div>
-            </a>
-
-            <a href="https://rounding-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
-                <div class="quest-icon">↕️</div>
-                <h3 class="quest-title">Rounding</h3>
-                <div class="quest-button">Play Now</div>
-            </a>
-            
-            <a href="https://shapes-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
-                <div class="quest-icon">🔷</div>
-                <h3 class="quest-title">Shapes</h3>
-                <div class="quest-button">Play Now</div>
-            </a>
-
-            <a href="https://counting-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
-                <div class="quest-icon">🔢</div>
-                <h3 class="quest-title">Counting</h3>
-                <div class="quest-button">Play Now</div>
-            </a>
-            
-            <a href="https://spelling-quest.web.app/" class="quest-card fade-in" target="_blank" rel="noopener noreferrer">
+            <a href="https://spelling-quest.web.app/" class="quest-card fade-in" target="_blank" rel="noopener noreferrer" data-title="Spelling">
                 <div class="quest-icon">📝</div>
                 <h3 class="quest-title">Spelling</h3>
                 <div class="quest-button">Play Now</div>
             </a>
             
+            <a href="https://monetki-quest.web.app" class="quest-card fade-in" target="_blank" rel="noopener noreferrer" data-title="Coins">
+                <div class="quest-icon">🪙</div>
+                <h3 class="quest-title">Coins</h3>
+                <div class="quest-button">Play Now</div>
+            </a>
         </div>
     </section>
 
