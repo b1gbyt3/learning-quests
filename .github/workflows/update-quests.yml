@@ -1,0 +1,29 @@
+name: Update Daily Quest Cards
+
+on:
+  schedule:
+    - cron: '0 7 * * 1-5' 
+
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  update-quests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grant write permission to the GITHUB_TOKEN
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install beautifulsoup4
+
+    - name: Run quest update script
+      run: python update_quests.py
+
